@@ -1,0 +1,1 @@
+var basic = require('./app/basic')();
