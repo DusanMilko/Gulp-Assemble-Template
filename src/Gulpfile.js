@@ -39,7 +39,7 @@ gulp.task('css', function() {
     }))
     .pipe(sass())
     .pipe(autoprefixer('last 15 versions'))
-    .pipe(minifycss())
+    //.pipe(minifycss())
     .pipe(gulp.dest('../build/assets/css'))
     .pipe(notify({ message : 'Gulp Complete'}));
 });

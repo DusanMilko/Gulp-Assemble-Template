@@ -1,4 +1,23 @@
+@import 'libs/normalize';
+
+//Variables
+@import 'variables';
+
+//Mixins
+@import 'mixins';
+
+//Fonts
+@import 'fonts';
+
+//Foundation
+@import 'libs/foundation/settings';
+@import 'libs/foundation';
+
+//Type Styles
+@import 'typography';
+
 //Global Styles
 @import 'global';
 
+//Other
 @import 'partials/*.scss'
