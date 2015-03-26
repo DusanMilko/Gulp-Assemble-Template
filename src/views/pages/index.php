@@ -1,0 +1,5 @@
+---
+title: Document
+---
+
+{{site.title}}
