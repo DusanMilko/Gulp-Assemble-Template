@@ -19,6 +19,7 @@ bower_components/
 build/
 dist/
 app/
+todo/
 composer.phar
 
 # Common Text Editor or IDE files #

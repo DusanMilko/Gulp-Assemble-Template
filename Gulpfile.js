@@ -11,6 +11,7 @@ var rename = require('gulp-rename');
 var del = require('del');
 var cssGlobbing = require('gulp-css-globbing');
 var fabricate = require('gulp-fabricate');
+var todo = require('gulp-todo');
 
 var paths = {
   images: 'src/assets/imgs/**/*'
@@ -87,6 +88,21 @@ gulp.task('images', ['clean'], function() {
   return gulp.src(paths.images)
     .pipe(imagemin({optimizationLevel: 7}))
     .pipe(gulp.dest('build/assets/imgs'));
+});
+
+// ----------------------------------------------------------------
+
+// generate a todo.md from your javascript files 
+gulp.task('todo', function() {
+  gulp.src('src/assets/js/**/*.js')
+    .pipe(todo({ fileName: 'todo-js.md'}))
+    .pipe(gulp.dest('./todo'));
+  gulp.src('src/assets/scss/**/*.scss')
+    .pipe(todo({ fileName: 'todo-scss.md'}))
+    .pipe(gulp.dest('./todo'));
+  gulp.src('src/views/**/*.hbs')
+    .pipe(todo({ fileName: 'todo-pages.md'}))
+    .pipe(gulp.dest('./todo'));
 });
 
 // ----------------------------------------------------------------
