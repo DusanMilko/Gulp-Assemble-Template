@@ -15,6 +15,8 @@ A light static site builder using handlebars, gulp, browserify, sass, json.
 
 **gulp pages** - generate all pages
 
+**gulp fonts** - cmove fonts to build folder
+
 **gulp todo** - go through and generate todo's based off of comments "//TODO:"
 
 **gulp watch** - look for changes in src/pages|scss|js
@@ -25,6 +27,7 @@ A light static site builder using handlebars, gulp, browserify, sass, json.
 ```
 └── src
   ├── assets
+  │    ├── fonts
   │    ├── imgs
   │    │   └── *.*
   │    ├── js
