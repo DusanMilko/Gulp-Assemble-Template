@@ -84,10 +84,15 @@ gulp.task('compressjs', function() {
 });
 
 // Copy all static images
-gulp.task('images', ['clean'], function() {
+gulp.task('images', function() {
   return gulp.src(paths.images)
     .pipe(imagemin({optimizationLevel: 7}))
     .pipe(gulp.dest('build/assets/imgs'));
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('src/assets/fonts')
+    .pipe(gulp.dest('build/assets/'));
 });
 
 // ----------------------------------------------------------------
@@ -107,11 +112,12 @@ gulp.task('todo', function() {
 
 // ----------------------------------------------------------------
 
-gulp.task('build', function() {
+gulp.task('build', ['clean'], function() {
   gulp.run('images');
   gulp.run('css');
   gulp.run('js');
   gulp.run('pages');
+  gulp.run('fonts');
 });
 
 // ----------------------------------------------------------------
