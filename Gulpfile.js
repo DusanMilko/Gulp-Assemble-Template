@@ -10,8 +10,8 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var del = require('del');
 var cssGlobbing = require('gulp-css-globbing');
-var fabricate = require('gulp-fabricate');
 var todo = require('gulp-todo');
+var assemble = require('assemble');
 
 var paths = {
   images: 'src/assets/imgs/**/*'
@@ -25,20 +25,16 @@ gulp.task('clean', function(cb) {
 
 // ----------------------------------------------------------------
 
-gulp.task('pages', function () {
-  var fabopts = {
-    layout: 'default',
-    layouts: 'src/views/layouts/**/*',
-    materials: 'src/partials/**/*',
-    data: 'src/data/**/*.json',
-    docs: 'src/docs/**/*.md'
-  };
-  gulp.src('src/views/pages/**/*')
-    .pipe(fabricate(fabopts))
+assemble.data(['src/data/**/*.{json,yml}']);
+assemble.partials('src/views/partials/**/*.hbs');
+assemble.layouts('src/views/layouts/**/*.hbs');
+
+gulp.task('assemble', function() {
+  assemble.src('src/views/pages/**/*.hbs')
     .pipe(rename(function (path) {
-        path.extname = ".html"
+      path.extname = ".html"
     }))
-    .pipe(gulp.dest('build/'));
+    .pipe(assemble.dest('build/'));
 });
 
 // ----------------------------------------------------------------
@@ -116,14 +112,14 @@ gulp.task('build', ['clean'], function() {
   gulp.run('images');
   gulp.run('css');
   gulp.run('js');
-  gulp.run('pages');
   gulp.run('fonts');
+  gulp.run('assemble');
 });
 
 // ----------------------------------------------------------------
 
 gulp.task('watch', function() {
-  gulp.watch('src/views/pages/**/*', ['pages']);
+  gulp.watch('src/views/**/*.hbs', ['assemble']);
   gulp.watch('src/assets/scss/**/*.scss', ['css']);
   gulp.watch('src/assets/js/**/*.js', ['js']);
 });
