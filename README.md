@@ -1,6 +1,6 @@
 # Static Builder
 
-A light static site builder using handlebars, gulp, browserify, sass, json.
+A light scaffold to build static sites using assemble, handlebars, gulp, browserify, sass, json.
 
 
 ### Tasks:
@@ -13,7 +13,7 @@ A light static site builder using handlebars, gulp, browserify, sass, json.
 
 **gulp js** - compile js with browserify
 
-**gulp pages** - generate all pages
+**gulp assemble** - generate all pages
 
 **gulp fonts** - cmove fonts to build folder
 
@@ -41,12 +41,9 @@ A light static site builder using handlebars, gulp, browserify, sass, json.
   │        └── _*.scss
   ├── data
   │   └── *.{json,yml}
-  ├── docs
-  │   └── *.md
-  ├── partials
-  │   └── *
-  │       └── *.{hbs,html,php}
   └── views
+      ├── partials
+      │   └── *.{hbs,html,php}
       ├── layouts
       │   └── default.{hbs,html,php}
       └── pages
