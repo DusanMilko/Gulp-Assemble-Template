@@ -148,4 +148,6 @@ If you do any js templating put that into "src/assets/js/templates/"
 Put svg files into "src/assets/icons" 
 Then run **gulp iconfont** to generate font and matching scss file
 
+Once the icon font is generated uncomment the import of "icon-font" in the main.scss file
+
 
