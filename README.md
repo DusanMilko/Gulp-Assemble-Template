@@ -4,13 +4,14 @@ A light scaffold to build static sites using assemble, gulp, browserify, sass, h
 
 All the files you edit go into **src** and get compiles into **build**
 
+---
 ## Setup
 
 NPM is required to be installed.
 
 Run `npm install` after clone to download gulp and other required modules.
 
-
+---
 ### Tasks:
 
 **gulp build** - cleans and builds everything into build folder
@@ -31,7 +32,7 @@ Run `npm install` after clone to download gulp and other required modules.
 
 **gulp iconfont** - generate icon font
 
-
+---
 ### Folder Structure
 
 ```
@@ -70,11 +71,15 @@ Run `npm install` after clone to download gulp and other required modules.
           └── index.{hbs,html,php}
 ```
 
+---
 ### Pages
 
 All the files in **pages** folder are used to generate static pages.
+
 These files in pages should contain the core content of the page.
-The layout files will contain the major layout and are refrenced to by front matter(more on that below)
+
+The layout files will contain the major layout and are referenced to by front matter(more on that below)
+
 Pages can also load partials anywhere in the page
 
 
@@ -118,12 +123,14 @@ with custom json
 
 ```
 
+---
 ### SCSS
 
 All scss goes into the "src/assets/scss/" 
 
 All scss goes into the "src/assets/scss/libs"  
 
+---
 ### JS
 
 Using Browserify for JS
@@ -135,6 +142,7 @@ All libraries goes into the "src/assets/js/libs"
 
 If you do any js templating put that into "src/assets/js/templates/"
 
+---
 ### Icon Font
 
 Put svg files into "src/assets/icons" 
