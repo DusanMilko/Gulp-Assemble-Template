@@ -1,17 +1,18 @@
 @import 'libs/normalize';
 
-//Variables
-@import 'variables';
-
 //Mixins
 @import 'mixins';
 
 //Fonts
 @import 'fonts';
 
-//Foundation
-@import 'libs/foundation/settings';
-@import 'libs/foundation';
+//Framework here if you have one
+
+//Variables
+@import 'variables';
+
+//Docs
+@import 'libs/highlight';
 
 //Type Styles
 @import 'typography';
@@ -20,4 +21,5 @@
 @import 'global';
 
 //Other
+@import 'elements/*.scss'
 @import 'partials/*.scss'
