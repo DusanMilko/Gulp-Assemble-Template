@@ -92,7 +92,6 @@ arr:
 
 this.arr.[0] // {"a","b"}
 
----
 ```
 
 ##### Loading partial
