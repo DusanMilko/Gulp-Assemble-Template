@@ -33,6 +33,7 @@
   font-variant: normal;
   text-transform: none;
   text-decoration: inherit; 
+  display: inline-block;
 }
 
 <% _.each(glyphs, function(glyph) { %>.<%= glyph.name %>:before { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>" }

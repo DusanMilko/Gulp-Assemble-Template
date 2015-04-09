@@ -25,9 +25,26 @@
   <script src="/assets/js/libs/modernizr.min.js"></script>
 
 </head>
-<body>
+<body id="top">
 
+  {{> docs-nav}}
+
+  <div class="docs-title">
+    <h3>Project Name</h3>
+    <h4>{{title}}</h4>
+
+    <p>
+      Last Updated
+      </br>
+      <strong>{{#date}}{{/date}}</strong>
+    </p>
+  </div>
+
+  {{>docs-side-nav}}
+
+  <div class="docs-page">
     {% body %}
+  </div>
 
 <script src="/assets/js/main.js"></script>
 

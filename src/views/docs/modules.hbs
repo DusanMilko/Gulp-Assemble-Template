@@ -1,4 +1,17 @@
 ---
 layout: docs
 title: Modules
+side_nav:
+  - item
 ---
+
+<div id="item" class="docs__item">
+  {{#parseJSON '{
+    "title": "title",
+    "desc": "desc"
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view">
+  </div>
+</div><!--end section-->

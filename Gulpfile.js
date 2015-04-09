@@ -52,7 +52,10 @@ gulp.task('iconfont', function(){
   var lodash = require('lodash');
 
   gulp.src(['src/assets/icons/svgs/*.svg'])
-    .pipe(iconfont({ fontName: 'custom-icon-font' }))
+    .pipe(iconfont({ 
+      fontName: 'custom-icon-font',
+      appendCodepoints: true,
+    }))
     .on('codepoints', function(codepoints, options) {
       gulp.src('src/assets/icons/_icon-font.css')
         .pipe(consolidate('lodash', {
