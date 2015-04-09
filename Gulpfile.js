@@ -54,7 +54,7 @@ gulp.task('iconfont', function(){
   gulp.src(['src/assets/icons/svgs/*.svg'])
     .pipe(iconfont({ 
       fontName: 'custom-icon-font',
-      appendCodepoints: true,
+      normalize: true
     }))
     .on('codepoints', function(codepoints, options) {
       gulp.src('src/assets/icons/_icon-font.css')

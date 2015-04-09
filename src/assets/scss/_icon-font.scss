@@ -23,17 +23,18 @@
   text-align: center;
 }
 
-.fi-arrow-up:before, .fi-home:before, .fi-list:before, .fi-thumbnails:before, .fi-x:before,  .icons-i:before { display: inline-block;
+.fi-arrow-up:before, .fi-home:before, .fi-list:before, .fi-thumbnails:before, .fi-x:before,  .icons-i:before { 
+  display: inline-block;
   font-family: "custom-icon-font";
   font-style: normal;
   font-weight: normal;
-  line-height: 1;
+  line-height: 1.5em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-variant: normal;
   text-transform: none;
-  text-decoration: inherit; 
-  display: inline-block;
+  text-decoration: inherit;
+  vertical-align: middle;
 }
 
 .fi-arrow-up:before { content: "\E001" }
