@@ -18,6 +18,21 @@ gulp.task('clean', function(cb) {
 
 // ----------------------------------------------------------------
 
+gulp.task('sync', function() {
+  var browserSync = require('browser-sync');
+  var reload      = browserSync.reload;
+
+  browserSync({
+    server: {
+      baseDir: "./build"
+    }
+  });
+
+  gulp.watch("build/**/*").on('change', reload);
+});
+
+// ----------------------------------------------------------------
+
 // Generate pages and docs
 assemble.data(['src/data/**/*.{json,yml}']);
 assemble.helpers('src/helpers/**/*.js');
