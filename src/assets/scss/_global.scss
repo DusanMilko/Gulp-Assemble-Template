@@ -1,9 +1,4 @@
 // Global 
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 body {
   -webkit-font-smoothing:antialiased;
 }
@@ -23,9 +18,6 @@ body {
 .clear {
   clear: both;
 }
-.icon {
-  display: block;
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -42,8 +34,8 @@ body {
 .inline {
   display: inline;
 }
-i {
-  line-height: 1.5em;
+.inline-block {
+  display: inline-block;
 }
 
 // Size
@@ -106,4 +98,10 @@ i {
     vertical-align: middle;
     width: 100%;
   }
+}
+
+// Fix for icon font
+// ------------------------------------------------------
+i {
+  line-height: 1.5em;
 }
