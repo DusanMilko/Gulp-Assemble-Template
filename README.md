@@ -2,7 +2,7 @@
 
 A light scaffold to build static sites using assemble, gulp, browserify, sass, handlebars, and json.
 
-All the files you edit go into **src** and get compiles into **build**
+All the files you edit go into **src** and compiles into **build**
 
 ---
 ## Setup
