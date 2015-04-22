@@ -17,11 +17,14 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('clog', function () {
+  var fs = require('fs');
+
   require('conventional-changelog')({
     repository: 'https://github.com/DusanMilko/Gulp-Assemble-Template',
     version: require('./package.json').version
   }, function(err, log) {
     console.log('Here is your changelog!', log);
+    fs.writeFileSync('CHANGELOG-'+(require('./package.json').version)+'.md', log);
   });
 });
 
