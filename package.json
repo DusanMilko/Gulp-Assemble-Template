@@ -1,4 +1,5 @@
 {
+  "name": "gulp-assemble-template",
   "version": "0.1",
   "devDependencies": {
     "browser-sync": "^2.5.3",
