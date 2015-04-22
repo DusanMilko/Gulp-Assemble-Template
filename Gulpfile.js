@@ -16,6 +16,15 @@ gulp.task('clean', function(cb) {
   del(['build/**/*'], cb);
 });
 
+gulp.task('clog', function () {
+  require('conventional-changelog')({
+    repository: 'https://github.com/DusanMilko/Gulp-Assemble-Template',
+    version: require('./package.json').version
+  }, function(err, log) {
+    console.log('Here is your changelog!', log);
+  });
+});
+
 // ----------------------------------------------------------------
  
 gulp.task('push', function () {
