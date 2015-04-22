@@ -17,6 +17,19 @@ gulp.task('clean', function(cb) {
 });
 
 // ----------------------------------------------------------------
+ 
+gulp.task('push', function () {
+  var sftp = require('gulp-sftp');
+
+  gulp.src('build/**/*')
+    .pipe(sftp({
+      host: 'website.com',
+      user: 'johndoe',
+      pass: '1234'
+    }));
+});
+
+// ----------------------------------------------------------------
 
 gulp.task('sync', function() {
   var browserSync = require('browser-sync');
