@@ -23,9 +23,11 @@ gulp.task('push', function () {
 
   gulp.src('build/**/*')
     .pipe(sftp({
-      host: 'website.com',
-      user: 'johndoe',
-      pass: '1234'
+      host: '104.130.74.163',
+      user: 'dusan.milko',
+      pass: 'ZjL67fejnd',
+      port: 22,
+      remotePath: '/test/'
     }));
 });
 
